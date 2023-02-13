@@ -18,13 +18,13 @@ const navConfig = [
   },
   {
     title: 'Interviews',
-    path: '/dashboard/products',
-    icon: icon('ic_cart'),
-  },
-  {
-    title: 'blog',
     path: '/dashboard/blog',
     icon: icon('ic_blog'),
+  },
+  {
+    title: 'Simple Job Application',
+    path: '/dashboard/products',
+    icon: icon('ic_cart'),
   },
   {
     title: 'login',
@@ -36,7 +36,6 @@ const navConfig = [
     path: '/404',
     icon: icon('ic_disabled'),
   },
-
 ];
 
 export default navConfig;

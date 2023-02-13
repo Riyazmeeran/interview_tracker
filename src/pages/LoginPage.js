@@ -9,6 +9,8 @@ import Logo from '../components/logo';
 import Iconify from '../components/iconify';
 // sections
 import { LoginForm } from '../sections/auth/login';
+import PrinceInfotechLogo from '../img/PrinceInfotechLogo.png';
+
 
 // ----------------------------------------------------------------------
 
@@ -20,7 +22,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
 
 const StyledSection = styled('div')(({ theme }) => ({
   width: '100%',
-  maxWidth: 480,
+  maxWidth: 700,
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -50,35 +52,30 @@ export default function LoginPage() {
       </Helmet>
 
       <StyledRoot>
-        <Logo
-          sx={{
-            position: 'fixed',
-            top: { xs: 16, sm: 24, md: 40 },
-            left: { xs: 16, sm: 24, md: 40 },
-          }}
-        />
-
-        {mdUp && (
+      {mdUp && (
           <StyledSection>
-            <Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
-              Hi, Welcome Back
+            <Typography variant="h2" sx={{ px: 4, mt: 10, mb: 9 }}>
+              {/* Welcome To Prince Infotech */}
+              <img src={PrinceInfotechLogo} alt="login" />
             </Typography>
-            <img src="/assets/illustrations/illustration_login.png" alt="login" />
+           
           </StyledSection>
         )}
 
         <Container maxWidth="sm">
           <StyledContent>
-            <Typography variant="h4" gutterBottom>
-              Sign in 
+            <Typography variant="h4" gutterBottom sx={{ mb: 5 }}>
+            Welcome To Prince Infotech 
+            <Typography variant="body2" >
+             Learning Today For A Better
+              <Link variant="subtitle2">Jobs</Link>
             </Typography>
+          </Typography>
+          
 
-            <Typography variant="body2" sx={{ mb: 5 }}>
-              Don’t have an account? {''}
-              <Link variant="subtitle2">Get started</Link>
-            </Typography>
+         
 
-            <Stack direction="row" spacing={2}>
+            {/* <Stack direction="row" spacing={2}>
               <Button fullWidth size="large" color="inherit" variant="outlined">
                 <Iconify icon="eva:google-fill" color="#DF3E30" width={22} height={22} />
               </Button>
@@ -90,16 +87,12 @@ export default function LoginPage() {
               <Button fullWidth size="large" color="inherit" variant="outlined">
                 <Iconify icon="eva:twitter-fill" color="#1C9CEA" width={22} height={22} />
               </Button>
-            </Stack>
+            </Stack> */}
 
-            <Divider sx={{ my: 3 }}>
-              <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                OR
-              </Typography>
-            </Divider>
+            
 
             <LoginForm />
-          </StyledContent>
+            </StyledContent>
         </Container>
       </StyledRoot>
     </>
